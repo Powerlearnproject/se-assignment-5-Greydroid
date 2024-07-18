@@ -565,54 +565,54 @@ By utilizing these methods, users can effectively create, open, manage files and
 8. Settings and Preferences:
    - Where can users find and customize settings in VS Code? Provide examples of how to change the theme, font size, and keybindings.
   
-   - ### Finding and Customizing Settings in VS Code
+   - Finding and Customizing Settings in VS Code
 
 In Visual Studio Code (VS Code), users can find and customize settings through the Settings UI, JSON settings file, and the Command Palette. Here’s how to locate and customize settings for changing the theme, font size, and keybindings:
 
-#### 1. **Settings UI**
+ 1. Settings UI
 
-- **Accessing Settings**:
+ - Accessing Settings:
   - Click on the gear icon (`⚙️`) in the lower-left corner of the VS Code window and select `Settings`.
   - Alternatively, press `Ctrl+,` (comma) to open the Settings UI directly.
 
-  ![Settings UI](https://code.visualstudio.com/assets/docs/getstarted/settings/settings-icon.png)
+  (https://code.visualstudio.com/assets/docs/getstarted/settings/settings-icon.png)
 
-- **Changing the Theme**:
+- Changing the Theme:
   1. In the Settings UI, type "theme" in the search box.
   2. Click on the `Color Theme` dropdown and select a theme from the list.
 
-  ![Change Theme](https://code.visualstudio.com/assets/docs/getstarted/themes/select-color-theme.png)
+  (https://code.visualstudio.com/assets/docs/getstarted/themes/select-color-theme.png)
 
-- **Adjusting Font Size**:
+- Adjusting Font Size:
   1. In the Settings UI, type "font size" in the search box.
   2. Use the `Editor: Font Size` setting to adjust the font size as desired.
 
-  ![Adjust Font Size](https://code.visualstudio.com/assets/docs/getstarted/settings/font-size.png)
+  (https://code.visualstudio.com/assets/docs/getstarted/settings/font-size.png)
 
-- **Customizing Keybindings**:
+- Customizing Keybindings:
   1. In the Settings UI, type "keybindings" in the search box.
   2. Click on `Open Keyboard Shortcuts (JSON)` to edit keybindings directly in the `keybindings.json` file.
 
-  ![Customize Keybindings](https://code.visualstudio.com/assets/docs/getstarted/keybindings/keybindings-json.png)
+  (https://code.visualstudio.com/assets/docs/getstarted/keybindings/keybindings-json.png)
 
-#### 2. **JSON Settings File**
+ 2. JSON Settings File
 
-- **Accessing JSON Settings**:
+- Accessing JSON Settings:
   - Click on the `Open Settings (JSON)` link at the top right of the Settings UI to directly edit the `settings.json` file.
 
-  ![Open Settings JSON](https://code.visualstudio.com/assets/docs/getstarted/settings/open-settings-json.png)
+  (https://code.visualstudio.com/assets/docs/getstarted/settings/open-settings-json.png)
 
-- **Example: Changing the Theme in `settings.json`**:
+- Example: Changing the Theme in `settings.json`:
   ```json
   "workbench.colorTheme": "Default Dark+"
   ```
 
-- **Example: Adjusting Font Size in `settings.json`**:
+- Example: Adjusting Font Size in `settings.json`:
   ```json
   "editor.fontSize": 14
   ```
 
-- **Example: Customizing Keybindings in `keybindings.json`**:
+- Example: Customizing Keybindings in `keybindings.json`:
   ```json
   // Example keybinding for commenting code
   {
@@ -622,36 +622,153 @@ In Visual Studio Code (VS Code), users can find and customize settings through t
   }
   ```
 
-#### 3. **Command Palette**
+ 3. Command Palette
 
-- **Accessing Settings via Command Palette**:
+- Accessing Settings via Command Palette:
   - Open the Command Palette (`Ctrl+Shift+P`).
   - Type specific settings commands like `Preferences: Color Theme`, `Preferences: Open Settings (JSON)`, or `Preferences: Open Keyboard Shortcuts (JSON)`.
 
-### Examples and Screenshots
+ Examples and Screenshots
 
-- **Changing Theme**:
-  ![Change Theme Example](https://code.visualstudio.com/assets/docs/getstarted/themes/select-color-theme.png)
+- Changing Theme:
+  (https://code.visualstudio.com/assets/docs/getstarted/themes/select-color-theme.png)
 
-- **Adjusting Font Size**:
-  ![Adjust Font Size Example](https://code.visualstudio.com/assets/docs/getstarted/settings/font-size.png)
+- Adjusting Font Size:
+  (https://code.visualstudio.com/assets/docs/getstarted/settings/font-size.png)
 
-- **Customizing Keybindings**:
-  ![Customize Keybindings Example](https://code.visualstudio.com/assets/docs/getstarted/keybindings/keybindings-json.png)
+- Customizing Keybindings:
+  (https://code.visualstudio.com/assets/docs/getstarted/keybindings/keybindings-json.png)
 
-### References
+ References
 - [Visual Studio Code Documentation - Settings](https://code.visualstudio.com/docs/getstarted/settings)
 - [Visual Studio Code Documentation - Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings)
 
 Customizing settings in VS Code using these methods allows users to personalize their coding environment effectively, improving productivity and comfort during development tasks.
+
   
-9. 
 
-10. Debugging in VS Code:
+9. Debugging in VS Code:
    - Outline the steps to set up and start debugging a simple program in VS Code. What are some key debugging features available in VS Code?
+     
+  
+   -Setting Up and Starting Debugging in VS Code
 
-11. Using Source Control:
+Debugging in Visual Studio Code (VS Code) involves configuring launch configurations and utilizing debugging tools to identify and resolve issues in your code.
+
+ Steps to Set Up and Start Debugging:
+
+1. Install Necessary Extensions (if not already installed):
+   - Ensure you have installed any necessary language-specific extensions for debugging (e.g., for Python, JavaScript, C++).
+
+2. Open Your Project in VS Code:
+   - Open VS Code and navigate to the folder containing your project.
+
+3. Create a Launch Configuration:
+   - Click on the `Run` icon in the Activity Bar on the side (or press `Ctrl+Shift+D`).
+   - Click on `create a launch.json file` or `Add Configuration...`.
+
+   (https://code.visualstudio.com/assets/docs/editor/debugging/debugging-create-configuration.png)
+
+   - Select the environment or framework you want to debug (e.g., Node.js, Python, C++), or choose `Add Configuration...` to create a custom configuration.
+
+4. Edit Launch Configuration (if necessary):
+   - Configure your launch.json file with appropriate settings such as program path, arguments, environment variables, etc., based on your project requirements.
+
+   (https://code.visualstudio.com/assets/docs/editor/debugging/debugging-edit-configuration.png)
+
+5. Set Breakpoints:
+   - Click in the gutter next to the line number where you want to set a breakpoint. Alternatively, you can press `F9` with the cursor on the line where you want the breakpoint.
+
+   (https://code.visualstudio.com/assets/docs/editor/debugging/debugging-toggle-breakpoint.png)
+
+6. Start Debugging:
+   - Press `F5` or click the `Run` button in the Debug view to start debugging with the current configuration.
+
+   (https://code.visualstudio.com/assets/docs/editor/debugging/debugging-start.png)
+
+7. Debugging Controls:
+   - Use the Debug Toolbar to control debugging actions like stepping through code (`F10` for step over, `F11` for step into), continue (`F5`), pause (`Shift+F5`), and stop debugging (`Shift+F5`).
+
+   (https://code.visualstudio.com/assets/docs/editor/debugging/debugging-toolbar.png)
+
+ Key Debugging Features in VS Code
+
+- Variable Inspection: Hover over variables to see their current values, or view them in the Variables panel.
+  
+- Watch Expressions: Add expressions to monitor their values during debugging.
+
+- Call Stack: View the call stack to understand the current execution context and navigate through function calls.
+
+- Conditional Breakpoints: Set breakpoints that only trigger when specific conditions are met.
+
+- Debug Console: Interact with the running program via the Debug Console to execute commands and evaluate expressions.
+
+- Multi-session Debugging: Debug multiple sessions simultaneously by configuring different launch configurations.
+
+ References
+- [Visual Studio Code Documentation - Debugging](https://code.visualstudio.com/docs/editor/debugging)
+
+By following these steps and utilizing these features, developers can effectively debug their programs in Visual Studio Code, ensuring smoother development and quicker issue resolution.
+
+
+
+10. Using Source Control:
     - How can users integrate Git with VS Code for version control? Describe the process of initializing a repository, making commits, and pushing changes to GitHub.
+   
+
+     - Integrating Git with Visual Studio Code (VS Code) allows developers to manage version control seamlessly within their coding environment. Here's a concise guide on how to initialize a Git repository, make commits, and push changes to GitHub using VS Code:
+
+Initializing a Repository
+
+1. Open Your Project in VS Code:
+   - Navigate to the folder containing your project.
+
+2. Initialize Git Repository:
+   - Open the Command Palette (`Ctrl+Shift+P`).
+   - Type and select `Git: Initialize Repository`.
+
+   (https://code.visualstudio.com/assets/docs/editor/versioncontrol/git-init-repo.png)
+
+   - Confirm the directory where you want to initialize the repository (usually the root of your project).
+
+3. Stage Files:
+   - Files that are not staged (untracked) will appear with a `U` icon. To stage files, click on the `+` button next to each file in the Source Control view.
+
+   (https://code.visualstudio.com/assets/docs/editor/versioncontrol/stage-changes.png)
+
+ Making Commits
+
+1. Commit Changes:
+   - Enter a commit message in the textbox at the top of the Source Control view.
+   - Press `Ctrl+Enter` or click the checkmark icon to commit your changes.
+
+   (https://code.visualstudio.com/assets/docs/editor/versioncontrol/commit.png)
+
+ Pushing Changes to GitHub
+
+1. Linking to GitHub:
+   - Ensure you have a GitHub repository set up and copy its HTTPS or SSH URL.
+
+2. Add Remote Repository:
+   - Open the Command Palette (`Ctrl+Shift+P`).
+   - Type and select `Git: Add Remote`.
+
+   (https://code.visualstudio.com/assets/docs/editor/versioncontrol/git-add-remote.png)
+
+   - Enter a name for the remote (e.g., `origin`) and paste the GitHub repository URL.
+
+3. Push Changes:
+   - After committing your changes, click on the ellipsis (`...`) in the Source Control view and select `Push`.
+
+   (https://code.visualstudio.com/assets/docs/editor/versioncontrol/push-changes.png)
+
+   - Select the branch you want to push to GitHub and click `OK`.
+
+ References
+- [Visual Studio Code Documentation - Version Control with Git](https://code.visualstudio.com/docs/editor/versioncontrol)
+
+By following these steps, developers can effectively manage their projects using Git within Visual Studio Code, ensuring proper version control and collaboration capabilities.
+
 
  Submission Guidelines:
 - Your answers should be well-structured, concise, and to the point.
